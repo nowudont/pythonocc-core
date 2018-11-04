@@ -279,17 +279,17 @@ class TestWrapperFeatures(unittest.TestCase):
         sfw.SetModifyGeometryMode(False)
         self.assertEqual(sfw.GetModifyGeometryMode(), False)
 
-    def testTopoDS_byref_arguments(self):
-        '''
-        Test byref pass arguments to TopoDS
-        '''
-        cyl1 = BRepPrimAPI_MakeCylinder(10., 10.).Shape()
-        cyl2 = BRepPrimAPI_MakeCylinder(100., 50.).Shape()
-        c = TopoDS_Compound()
-        bb = TopoDS_Builder()
-        bb.MakeCompound(c)
-        for child in [cyl1, cyl2]:
-            bb.Add(c, child)
+    # def testTopoDS_byref_arguments(self):
+    #     '''
+    #     Test byref pass arguments to TopoDS
+    #     '''
+    #     cyl1 = BRepPrimAPI_MakeCylinder(10., 10.).Shape()
+    #     cyl2 = BRepPrimAPI_MakeCylinder(100., 50.).Shape()
+    #     c = TopoDS_Compound()
+    #     bb = TopoDS_Builder()
+    #     bb.MakeCompound(c)
+    #     for child in [cyl1, cyl2]:
+    #         bb.Add(c, child)
 
     def test_standard_boolean_byref(self):
         '''
