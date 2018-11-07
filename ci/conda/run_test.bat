@@ -1,4 +1,6 @@
+dir .
 cd ..\work\test
+dir .
 python run_tests.py
 python run_examples_as_tests.py
 python core_webgl_unittest.py
